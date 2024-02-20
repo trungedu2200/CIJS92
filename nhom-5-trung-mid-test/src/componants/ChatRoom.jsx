@@ -88,7 +88,7 @@ const ChatRoom = () => {
   // Function to render messages for the selected user
   const renderMessages = () => {
     if (!selectedUser || !messages[selectedUser.id]) return null;
-    return messages[selectedUser.id].map((message, index) => (
+    return messages[selectedUser.id].slice().reverse().map((message, index) => (
       <div key={index} className={message.sender === 'me' ? 'sent' : 'received'}>
         <div className="sent-message">{message.content}</div>
         <div className="sent-time">{message.time}</div>
