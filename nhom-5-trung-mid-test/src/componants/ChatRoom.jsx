@@ -68,7 +68,7 @@ const ChatRoom = () => {
     updatedMessages[selectedUser.id].unshift({
       content: newMessage,
       time: currentTime,
-      sender: 'me', // Assuming the sender is the current user for simplicity
+      sender: 'me',
     });
     setMessages(updatedMessages);
     // Update lastChatTime for the selected user
